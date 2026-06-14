@@ -1,0 +1,6 @@
+<svg width="172" height="48" viewBox="0 0 172 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Settly">
+  <path d="M24 4c-9.94 0-18 8.06-18 18 0 11.57 13.5 22.63 16.34 24.84a2.66 2.66 0 0 0 3.32 0C28.5 44.63 42 33.57 42 22 42 12.06 33.94 4 24 4Z" fill="#F0533D"/>
+  <path d="M24 13.4 15 20.7V33h5.5v-7h7v7H33V20.7L24 13.4Z" fill="#fff"/>
+  <circle cx="24" cy="20.9" r="2.05" fill="#F0533D"/>
+  <text x="54" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" letter-spacing="-1.2" fill="#FFF6F1">settly</text>
+</svg>
