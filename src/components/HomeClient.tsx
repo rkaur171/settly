@@ -21,7 +21,7 @@ export default function HomeClient() {
       {flowOpen ? (
         <OnboardingFlow onClose={close} />
       ) : (
-        <div className="m-page">
+        <div className="m-page sy-landing">
           <Nav onStart={open} />
           <main>
             <Hero onStart={open} />

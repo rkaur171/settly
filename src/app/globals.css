@@ -850,7 +850,7 @@ img, svg { display: block; }
 .m-footer__legal {
   max-width: var(--container-wide);
   margin: 0 auto;
-  padding: 20px 40px 36px;
+  padding: 22px 40px 36px;
   border-top: 1px solid rgba(255, 246, 241, 0.12);
   display: flex;
   justify-content: space-between;
@@ -861,12 +861,17 @@ img, svg { display: block; }
 .m-footer__legal-right {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 18px;
 }
 
 /* ============================================================
    CANADA-SPECIFIC COMPONENTS
    ============================================================ */
+
+/* ---- Landing page context overrides ---- */
+.sy-landing .m-nav__links { gap: 20px; }
+.sy-landing .m-nav__inner { gap: 18px; }
+.sy-landing .m-steps .m-section__head--center { margin-bottom: 60px; }
 
 /* ---- Brand / locale badge ---- */
 .sy-brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
