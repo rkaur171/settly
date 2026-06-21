@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import {
-  ArrowLeft, ArrowRight, X, Leaf, Check, Sparkles,
-  GraduationCap, BadgeCheck, Briefcase, Compass,
-  Home, Landmark, CreditCard, Smartphone, Cross, Car,
+  ArrowLeft, ArrowRight, X, Leaf, Check,
+  GraduationCap, BadgeCheck, Briefcase, Compass, Plane,
+  Home, Landmark, Stamp, Receipt, Users,
   MessageCircle, Mail, ShieldCheck, Phone, User, ChevronDown,
   Route, Search, ListOrdered, MapPin,
 } from 'lucide-react'
@@ -13,21 +13,22 @@ import type { LucideIcon } from 'lucide-react'
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const STATUSES = [
-  { id: 'student', Icon: GraduationCap, label: 'International student', blurb: 'Study permit holder' },
-  { id: 'pr',      Icon: BadgeCheck,    label: 'New permanent resident', blurb: 'Landed immigrant / PR' },
-  { id: 'work',    Icon: Briefcase,     label: 'Work-permit holder',     blurb: 'Open or closed work permit' },
-  { id: 'other',   Icon: Compass,       label: 'Something else',         blurb: 'Visitor, refugee, family sponsorship…' },
+  { id: 'student',  Icon: GraduationCap, label: 'International student', blurb: 'Study permit holder' },
+  { id: 'pr',       Icon: BadgeCheck,    label: 'Permanent resident',    blurb: 'Landed immigrant / PR' },
+  { id: 'work',     Icon: Briefcase,     label: 'Work permit holder',    blurb: 'Open or closed work permit' },
+  { id: 'visitor',  Icon: Compass,       label: 'Visitor',               blurb: 'Visitor or tourist visa' },
+  { id: 'planning', Icon: Plane,         label: 'Planning to move',      blurb: 'Preparing your move to Canada' },
 ]
 
 const SERVICES = [
-  { id: 'airport', Icon: BadgeCheck,  title: 'Get your SIN'        },
-  { id: 'housing', Icon: Home,       title: 'Housing'             },
-  { id: 'banking', Icon: Landmark,   title: 'Bank account'        },
-  { id: 'credit',  Icon: CreditCard, title: 'Credit card'         },
-  { id: 'sim',     Icon: Smartphone, title: 'SIM & phone plan'    },
-  { id: 'docs',    Icon: BadgeCheck, title: 'SIN & documents'     },
-  { id: 'health',  Icon: Cross,      title: 'Health card (OHIP)'  },
-  { id: 'license', Icon: Car,        title: "Driver's licence"    },
+  { id: 'immigration', Icon: Stamp,       title: 'Immigration',          description: 'Permits, status & your path to PR'          },
+  { id: 'housing',     Icon: Home,        title: 'Housing',              description: 'Short-term stays & long-term leases'         },
+  { id: 'airport',     Icon: Plane,       title: 'Airport pickup',       description: 'A ride waiting the moment you land'         },
+  { id: 'banking',     Icon: Landmark,    title: 'Banking',              description: 'A newcomer account on day one'              },
+  { id: 'jobs',        Icon: Briefcase,   title: 'Jobs',                 description: 'Canada-ready resume & warm intros'          },
+  { id: 'taxes',       Icon: Receipt,     title: 'Taxes',                description: 'File your first return & claim benefits'    },
+  { id: 'docs',        Icon: BadgeCheck,  title: 'Government IDs',       description: "SIN, Health Card & Driver's Licence"        },
+  { id: 'community',   Icon: Users,       title: 'Community & networking', description: 'Meet newcomers & build your circle'       },
 ]
 
 const ORIGINS = [
@@ -59,7 +60,7 @@ const COUNTRY_CODES = [
 const STEP_META = [
   { eyebrow: 'Step 1 of 4', title: 'Tell us about your move',    sub: "Where you're coming from, and where you're landing."      },
   { eyebrow: 'Step 2 of 4', title: 'What can we help you with?', sub: 'Pick everything that applies — you can change this later.' },
-  { eyebrow: 'Step 3 of 4', title: 'What brings you to Canada?', sub: 'This tailors every step of your plan.'                    },
+  { eyebrow: 'Step 3 of 4', title: 'Which best describes your situation?', sub: 'This tailors every step of your plan.'           },
   { eyebrow: 'Step 4 of 4', title: 'Where should we reach you?', sub: 'An advisor messages you here within a few hours.'         },
 ]
 
@@ -214,21 +215,26 @@ function OnboardingForm({
                   {ORIGINS.map((o) => <option key={o} value={o}>{o}</option>)}
                 </FieldSelect>
 
-                <FieldSelect label="Arrival" value={a.city} onChange={(e) => patch({ city: e.target.value })}>
+                <FieldSelect label="To" value={a.city} onChange={(e) => patch({ city: e.target.value })}>
                   <option value="" disabled>Choose a city…</option>
                   {CITIES.map((c) => <option key={c} value={c}>{c}</option>)}
                 </FieldSelect>
 
-                <FieldInput label="Arrival date" type="date" value={a.arrival}
-                  hint="Roughly is fine — it sets your deadlines."
-                  onChange={(e) => patch({ arrival: e.target.value })} />
+                <FieldSelect label="When are you moving to Canada?" value={a.arrival} onChange={(e) => patch({ arrival: e.target.value })}>
+                  <option value="" disabled>Choose a timeframe…</option>
+                  <option value="Already in Canada">Already in Canada</option>
+                  <option value="Within 30 days">Within 30 days</option>
+                  <option value="1–3 months">1–3 months</option>
+                  <option value="3–6 months">3–6 months</option>
+                  <option value="More than 6 months">More than 6 months</option>
+                </FieldSelect>
               </div>
             )}
 
             {step === 1 && (
               <div className="sy-opts">
                 {SERVICES.map((s) => (
-                  <OptionCard key={s.id} Icon={s.Icon} label={s.title} multi
+                  <OptionCard key={s.id} Icon={s.Icon} label={s.title} blurb={s.description} multi
                     selected={a.services.includes(s.id)}
                     onClick={() => toggleService(s.id)} />
                 ))}
@@ -250,22 +256,6 @@ function OnboardingForm({
                 <FieldInput label="Your first name" placeholder="e.g. Priya" value={a.name}
                   icon={User} onChange={(e) => patch({ name: e.target.value })} />
 
-                <div className="sy-field">
-                  <span className="sy-field__label">Best way to reach you</span>
-                  <div className="sy-seg">
-                    <button type="button"
-                      className={`sy-seg__btn${a.channel === 'whatsapp' ? ' sy-seg__btn--on' : ''}`}
-                      onClick={() => patch({ channel: 'whatsapp', contact: '' })}>
-                      <MessageCircle size={18} strokeWidth={2} />WhatsApp
-                    </button>
-                    <button type="button"
-                      className={`sy-seg__btn${a.channel === 'email' ? ' sy-seg__btn--on' : ''}`}
-                      onClick={() => patch({ channel: 'email', contact: '' })}>
-                      <Mail size={18} strokeWidth={2} />Email
-                    </button>
-                  </div>
-                </div>
-
                 {a.channel === 'whatsapp' ? (
                   <div className="sy-field">
                     <span className="sy-field__label">WhatsApp number</span>
@@ -281,7 +271,7 @@ function OnboardingForm({
                       </div>
                       <div className="sy-input-wrap sy-input-wrap--icon sy-phone__num">
                         <Phone size={18} strokeWidth={1.8} />
-                        <input className="sy-input" type="tel" inputMode="numeric" maxLength={10}
+                        <input className="sy-input" type="tel" inputMode="numeric" maxLength={12}
                           placeholder="416 000 0000" value={a.contact}
                           onChange={(e) => patch({ contact: e.target.value.replace(/\D/g, '').slice(0, 10) })} />
                       </div>
@@ -309,9 +299,9 @@ function OnboardingForm({
             </button>
             <button type="button" className="sy-btn sy-btn--primary sy-btn--lg"
               onClick={next} disabled={!valid[step]} style={{ gap: 8 }}>
-              {step === TOTAL - 1 ? 'Plan my arrival' : 'Continue'}
+              {step === TOTAL - 1 ? 'Continue on WhatsApp' : 'Continue'}
               {step === TOTAL - 1
-                ? <Sparkles size={20} strokeWidth={2} />
+                ? <MessageCircle size={20} strokeWidth={2} />
                 : <ArrowRight size={20} strokeWidth={2} />}
             </button>
           </div>
