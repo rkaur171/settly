@@ -163,7 +163,7 @@ export default function Hero({ onStart }: { onStart: () => void }) {
 
         <div className="sy-hero__cta hero-cta">
           <button className="sy-btn sy-btn--primary sy-btn--lg" style={{ gap: 10 }} onClick={onStart}>
-            Get started
+            Get your free newcomer plan
             <ArrowRight size={20} strokeWidth={2} />
           </button>
         </div>

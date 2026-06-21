@@ -682,6 +682,17 @@ img, svg { display: block; }
   transition: box-shadow var(--dur-base) var(--ease-standard);
 }
 .m-step:hover { box-shadow: var(--shadow-card); }
+.m-step:not(:last-child)::after {
+  content: '\2192';
+  position: absolute;
+  top: 50%;
+  right: -28px;
+  transform: translate(50%, -50%);
+  font-size: 24px;
+  line-height: 1;
+  color: var(--border-strong);
+  z-index: 2;
+}
 .m-step__icon {
   width: 52px;
   height: 52px;
