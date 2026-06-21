@@ -7,8 +7,8 @@ import { Leaf, ChevronDown, LifeBuoy, MapPin } from 'lucide-react'
 const GTA_REGIONS = [
   { region: 'City of Toronto', cities: ['Toronto', 'Etobicoke', 'North York', 'Scarborough', 'East York'] },
   { region: 'Peel',            cities: ['Mississauga', 'Brampton', 'Caledon'] },
-  { region: 'York',            cities: ['Vaughan', 'Markham', 'Richmond Hill', 'Newmarket', 'Aurora'] },
-  { region: 'Durham',          cities: ['Pickering', 'Ajax', 'Whitby', 'Oshawa', 'Clarington'] },
+  { region: 'York',            cities: ['Vaughan', 'Markham', 'Richmond Hill', 'Newmarket', 'Aurora', 'King', 'Georgina', 'East Gwillimbury', 'Whitchurch-Stouffville'] },
+  { region: 'Durham',          cities: ['Pickering', 'Ajax', 'Whitby', 'Oshawa', 'Clarington', 'Uxbridge', 'Scugog', 'Brock'] },
   { region: 'Halton',          cities: ['Oakville', 'Burlington', 'Milton', 'Halton Hills'] },
 ]
 
@@ -46,7 +46,13 @@ function WhereWeServe() {
               <div className="sy-navdd__col" key={r.region}>
                 <span className="sy-navdd__region">{r.region}</span>
                 {r.cities.map((c) => (
-                  <a key={c} href="#services" className="sy-navdd__city">{c}</a>
+                  <a
+                    key={c}
+                    href={`https://wa.me/16474870919?text=${encodeURIComponent(`Hi Settly, I'm in ${c} and would like help settling in.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="sy-navdd__city"
+                  >{c}</a>
                 ))}
               </div>
             ))}
