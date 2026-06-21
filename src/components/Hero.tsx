@@ -109,13 +109,13 @@ function HeroDemo() {
             <>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/avatar-nadia.svg"
-                alt="Nadia"
+                src="/avatar-priya.svg"
+                alt="Priya"
                 width={28}
                 height={28}
                 style={{ borderRadius: '50%', flexShrink: 0 }}
               />
-              <span><strong>Nadia</strong> is helping you on WhatsApp</span>
+              <span><strong>Priya</strong> is helping you on WhatsApp</span>
             </>
           )}
         </div>

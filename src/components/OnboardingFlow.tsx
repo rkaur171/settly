@@ -319,10 +319,10 @@ function OnboardingForm({
         <aside className="sy-flow__aside">
           <div className="sy-advisorcard">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/avatar-nadia.svg" alt="Nadia" width={56} height={56}
+            <img src="/avatar-priya.svg" alt="Priya" width={56} height={56}
               style={{ borderRadius: '50%', border: '2px solid var(--coral-200)', flexShrink: 0 }} />
             <div>
-              <div className="ds-title-md">Nadia · your advisor</div>
+              <div className="ds-title-md">Priya · your advisor</div>
               <div className="ds-caption" style={{ color: 'var(--teal-600)' }}>● Usually replies in minutes</div>
             </div>
           </div>
@@ -332,7 +332,7 @@ function OnboardingForm({
           </p>
           <div className="sy-aside__stat">
             <span className="ds-stat" style={{ fontSize: 40 }}>300+</span>
-            <span className="ds-body-sm" style={{ color: 'var(--muted)' }}>newcomers settled by Nadia&apos;s team</span>
+            <span className="ds-body-sm" style={{ color: 'var(--muted)' }}>newcomers settled by Priya&apos;s team</span>
           </div>
         </aside>
       </div>
@@ -424,16 +424,16 @@ function DoneScreen({ answers, onHome }: { answers: Answers; onHome: () => void 
 
         <div className="sy-railcard sy-railcard--advisor">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/avatar-nadia.svg" alt="Nadia" width={64} height={64}
+          <img src="/avatar-priya.svg" alt="Priya" width={64} height={64}
             style={{ borderRadius: '50%', border: '2px solid var(--coral-200)' }} />
           <h3 className="ds-title-lg" style={{ marginTop: 12 }}>Stuck on anything?</h3>
           <p className="ds-body-sm" style={{ color: 'var(--muted)' }}>
-            Nadia has helped 300+ newcomers settle across the GTA. Message her any time.
+            Priya has helped 300+ newcomers settle across the GTA. Message her any time.
           </p>
           <a className="sy-btn sy-btn--primary sy-btn--md sy-btn--block"
             href={waHref} target="_blank" rel="noopener noreferrer"
             style={{ marginTop: 16, gap: 8 }}>
-            <MessageCircle size={18} strokeWidth={2} />Message Nadia
+            <MessageCircle size={18} strokeWidth={2} />Message Priya
           </a>
         </div>
       </div>
