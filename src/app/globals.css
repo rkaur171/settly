@@ -597,6 +597,58 @@ img, svg { display: block; }
   gap: 18px;
 }
 
+/* ---- Phases (Services) ---- */
+.m-phases { display: flex; flex-direction: column; gap: 56px; }
+.m-phase { display: flex; flex-direction: column; gap: 22px; }
+.m-phase__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--hairline);
+}
+.m-phase__num {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: 18px;
+  background: var(--accent-tint);
+  color: var(--accent);
+}
+.m-phase__meta { display: flex; flex-direction: column; gap: 6px; padding-top: 2px; }
+.m-phase__titlerow { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.m-phase__time {
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-body-sm);
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--accent-tint);
+  color: var(--accent);
+}
+.m-phase__purpose { margin: 0; color: var(--muted); }
+.m-phase--blue  { --accent: var(--blue-600);  --accent-tint: color-mix(in srgb, var(--blue-500) 12%, #fff); }
+.m-phase--teal  { --accent: var(--teal-600);  --accent-tint: var(--teal-50); }
+.m-phase--amber { --accent: var(--amber-600); --accent-tint: var(--amber-50); }
+.m-phase--coral { --accent: var(--coral-600); --accent-tint: var(--coral-50); }
+.m-phases__outro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  margin-top: 56px;
+  padding-top: 44px;
+  border-top: 1px solid var(--hairline);
+}
+.m-phases__anchor { max-width: 720px; margin: 0; text-wrap: balance; }
+
 /* ---- Steps band ---- */
 .m-steps {
   background: var(--surface-soft);
@@ -650,6 +702,61 @@ img, svg { display: block; }
   user-select: none;
 }
 .m-step h3 { margin: 18px 0 8px; }
+.m-step--blue  { --step-accent: var(--blue-600);  --step-tint: color-mix(in srgb, var(--blue-500) 12%, #fff); }
+.m-step--teal  { --step-accent: var(--teal-600);  --step-tint: var(--teal-50); }
+.m-step--amber { --step-accent: var(--amber-600); --step-tint: var(--amber-50); }
+.m-step--blue .m-step__icon,
+.m-step--teal .m-step__icon,
+.m-step--amber .m-step__icon { background: var(--step-tint); color: var(--step-accent); }
+.m-step__list {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.m-step__list li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--body);
+  font: var(--weight-regular) var(--text-body-md)/1.4 var(--font-sans);
+}
+.m-step__list li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--step-accent, var(--coral-600));
+}
+.m-step__purpose {
+  margin: 18px 0 0;
+  padding-top: 16px;
+  border-top: 1px dashed var(--hairline);
+  font: var(--weight-semibold) var(--text-body-sm) var(--font-sans);
+  color: var(--step-accent, var(--coral-600));
+}
+.m-journey__rail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px auto 0;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-body-md);
+}
+.m-steps__outro {
+  max-width: 760px;
+  margin: 44px auto 0;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--ink);
+}
 
 /* ---- Stats band ---- */
 .m-stats {
