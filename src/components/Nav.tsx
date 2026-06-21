@@ -99,8 +99,10 @@ export default function Nav({ onStart }: { onStart: () => void }) {
         </div>
 
         <nav className="m-nav__links" aria-label="Main">
-          <a href="#services" className="m-nav__link" onClick={(e) => { e.preventDefault(); onStart() }}>Airport pickup</a>
-          <a href="#services" className="m-nav__link" onClick={(e) => { e.preventDefault(); onStart() }}>Home rentals</a>
+          <a href="#services" className="m-nav__link" onClick={(e) => { e.preventDefault(); onStart() }}>Housing</a>
+          <a href="#services" className="m-nav__link" onClick={(e) => { e.preventDefault(); onStart() }}>Banking</a>
+          <a href="#services" className="m-nav__link" onClick={(e) => { e.preventDefault(); onStart() }}>Jobs</a>
+          <a href="#services" className="m-nav__link" onClick={(e) => { e.preventDefault(); onStart() }}>Immigration</a>
           <WhereWeServe />
         </nav>
 

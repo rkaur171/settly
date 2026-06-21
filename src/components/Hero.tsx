@@ -149,18 +149,17 @@ export default function Hero({ onStart }: { onStart: () => void }) {
       <div className="m-hero__copy">
         <span className="m-eyebrow hero-eyebrow">
           <span className="m-dot" />
-          Your first 30 days in Ontario
+          Your first year in Canada, simplified
         </span>
 
         <h1 className="ds-display-2xl m-hero__h1">
           <span className="hero-line-wrap"><span className="hero-line">New to Canada?</span></span>
-          <span className="hero-line-wrap"><span className="hero-line">We&apos;ll help you settle in.</span></span>
+          <span className="hero-line-wrap"><span className="hero-line">We&apos;ll help you settle in with confidence.</span></span>
         </h1>
 
         <p className="ds-body-lg m-hero__sub hero-sub">
-          Airport pickup, a home, a bank account, a phone, your SIN, a health card (OHIP),
-          a credit card and a driver&apos;s licence — Settly walks you through every step of
-          arriving in Canada, in the right order, with a real advisor a message away.
+          From immigration and airport pickup to housing, SIN, health card, banking, jobs,
+          taxes, and community support — all in one place.
         </p>
 
         <div className="sy-hero__cta hero-cta">
@@ -174,7 +173,12 @@ export default function Hero({ onStart }: { onStart: () => void }) {
           </a>
         </div>
 
-        <div className="m-hero__trust hero-trust">
+        <a
+          className="m-hero__trust hero-trust"
+          href="https://wa.me/16474105281?text=Hi%20Settly%2C%20I%27d%20like%20to%20join%20the%20early%20access%20newcomer%20community."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="m-stack">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <div className="m-avatar"><img src="/avatar-a.svg" alt="newcomer" /></div>
@@ -184,9 +188,9 @@ export default function Hero({ onStart }: { onStart: () => void }) {
             <div className="m-avatar"><img src="/avatar-c.svg" alt="newcomer" /></div>
           </div>
           <span className="ds-body-sm">
-            <strong style={{ color: 'var(--ink)' }}>12,000+ newcomers</strong> settled across the GTA
+            <strong style={{ color: 'var(--ink)' }}>Join our early access newcomer community</strong>
           </span>
-        </div>
+        </a>
       </div>
 
       <div className="m-hero__art hero-art">

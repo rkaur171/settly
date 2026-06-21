@@ -213,7 +213,7 @@ function OnboardingForm({
                   {ORIGINS.map((o) => <option key={o} value={o}>{o}</option>)}
                 </FieldSelect>
 
-                <FieldSelect label="Arriving in" value={a.city} onChange={(e) => patch({ city: e.target.value })}>
+                <FieldSelect label="Arrival" value={a.city} onChange={(e) => patch({ city: e.target.value })}>
                   <option value="" disabled>Choose a city…</option>
                   {CITIES.map((c) => <option key={c} value={c}>{c}</option>)}
                 </FieldSelect>

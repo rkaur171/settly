@@ -538,6 +538,7 @@ img, svg { display: block; }
   align-items: center;
   gap: 14px;
   margin-top: 24px;
+  text-decoration: none;
 }
 .m-stack { display: flex; }
 .m-stack > * + * { margin-left: -10px; }
