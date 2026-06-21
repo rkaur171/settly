@@ -334,12 +334,11 @@ function OnboardingForm({
 // ─── Building animation ───────────────────────────────────────────────────────
 
 function BuildingScreen({ answers, onDone }: { answers: Answers; onDone: () => void }) {
-  const city = answers.city && !answers.city.startsWith('Somewhere') ? answers.city : 'the GTA'
   const lines = [
-    { Icon: Search,        text: 'Reading your answers' },
-    { Icon: ListOrdered,   text: 'Putting your steps in the right order' },
-    { Icon: MapPin,        text: `Tuning it for ${city}` },
-    { Icon: MessageCircle, text: 'Looping in your advisor' },
+    { Icon: Search,        text: 'Understanding your situation' },
+    { Icon: ListOrdered,   text: 'Creating your personalized roadmap' },
+    { Icon: MapPin,        text: 'Tailoring recommendations for your city' },
+    { Icon: MessageCircle, text: 'Preparing your next steps' },
   ]
   const [shown, setShown] = useState(0)
 
@@ -356,7 +355,7 @@ function BuildingScreen({ answers, onDone }: { answers: Answers; onDone: () => v
         <span className="sy-building__pulse" />
         <Route size={38} strokeWidth={2} />
       </div>
-      <h2 className="ds-display-md" style={{ marginTop: 28 }}>Building your 30-day plan…</h2>
+      <h2 className="ds-display-md" style={{ marginTop: 28 }}>Creating your personalized newcomer plan…</h2>
       <ul className="sy-building__list">
         {lines.map((l, i) => {
           const { Icon } = l
@@ -404,26 +403,26 @@ function DoneScreen({ answers, onHome }: { answers: Answers; onHome: () => void 
       <div className="sy-done">
         <div className="sy-done__card">
           <span className="sy-done__check"><Check size={38} strokeWidth={2.4} /></span>
-          <h1 className="ds-display-lg sy-done__title">You&apos;re all set, {firstName}. 🎉</h1>
+          <h1 className="ds-display-lg sy-done__title">You&apos;re all set, {firstName} 🎉</h1>
           <p className="ds-body-lg sy-done__lede">
             Thanks for sharing the details of your move. Someone from the Settly team
             will get in touch on <strong>{channelLabel}</strong> within a few hours
             at <strong>{contact}</strong>.
           </p>
-          <p className="ds-body-md sy-done__sub">A real advisor — not a bot — takes it from here.</p>
+          <p className="ds-body-md sy-done__sub">Real people. Personalized guidance. No bots.</p>
         </div>
 
-        <div className="sy-railcard sy-railcard--advisor">
+        <div className="sy-railcard sy-railcard--advisor sy-done__advisor">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/avatar-priya.svg" alt="Priya" width={64} height={64}
             style={{ borderRadius: '50%', border: '2px solid var(--coral-200)' }} />
-          <h3 className="ds-title-lg" style={{ marginTop: 12 }}>Stuck on anything?</h3>
+          <h3 className="ds-title-lg" style={{ marginTop: 12 }}>What&apos;s next?</h3>
           <p className="ds-body-sm" style={{ color: 'var(--muted)' }}>
-            Priya has helped 300+ newcomers settle across the GTA. Message her any time.
+            Your advisor will help you prioritize the most important steps based on your timeline, status, and settlement goals.
           </p>
           <a className="sy-btn sy-btn--primary sy-btn--md sy-btn--block"
             href={waHref} target="_blank" rel="noopener noreferrer"
-            style={{ marginTop: 16, gap: 8 }}>
+            style={{ marginTop: 8, gap: 8 }}>
             <MessageCircle size={18} strokeWidth={2} />Message Priya
           </a>
         </div>
