@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Globe } from 'lucide-react'
 
-const WA_ADVISOR = 'https://wa.me/16474105281?text=Hi%20Settly%2C%20I%27d%20like%20to%20speak%20with%20an%20advisor.'
+const WA_ADVISOR = 'https://wa.me/16474870919?text=Hi%20Settly%2C%20I%27d%20like%20to%20speak%20with%20an%20advisor.'
 
 const COLS = [
   {

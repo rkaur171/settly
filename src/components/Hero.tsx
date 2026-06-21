@@ -175,7 +175,7 @@ export default function Hero({ onStart }: { onStart: () => void }) {
 
         <a
           className="m-hero__trust hero-trust"
-          href="https://wa.me/16474105281?text=Hi%20Settly%2C%20I%27d%20like%20to%20join%20the%20early%20access%20newcomer%20community."
+          href="https://wa.me/16474870919?text=Hi%20Settly%2C%20I%27d%20like%20to%20join%20the%20early%20access%20newcomer%20community."
           target="_blank"
           rel="noopener noreferrer"
         >

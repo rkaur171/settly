@@ -109,7 +109,7 @@ export default function Nav({ onStart }: { onStart: () => void }) {
         <div className="m-nav__right">
           <a
             className="sy-btn sy-btn--primary sy-btn--sm"
-            href="https://wa.me/16474105281?text=Hi%20Settly%2C%20I%20need%20urgent%20help%20settling%20in."
+            href="https://wa.me/16474870919?text=Hi%20Settly%2C%20I%20need%20urgent%20help%20settling%20in."
             target="_blank"
             rel="noopener noreferrer"
             style={{ gap: 8 }}

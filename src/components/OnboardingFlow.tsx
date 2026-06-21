@@ -394,7 +394,7 @@ function DoneScreen({ answers, onHome }: { answers: Answers; onHome: () => void 
     ? (answers.contact || 'your inbox')
     : (answers.contact ? `${answers.dial} ${answers.contact}` : 'your phone')
 
-  const waHref = 'https://wa.me/16474105281?text=' +
+  const waHref = 'https://wa.me/16474870919?text=' +
     encodeURIComponent(`Hi Settly, this is ${firstName}. I just submitted my details and would love to get started.`)
 
   return (
