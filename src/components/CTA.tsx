@@ -29,15 +29,15 @@ export default function CTA({ onStart }: { onStart: () => void }) {
     <div ref={rootRef} className="m-cta-wrap">
       <section className="m-cta">
         <h2 className="ds-display-xl cta-heading" style={{ color: 'var(--on-dark)' }}>
-          Tell us what you need. We&apos;ll handle the rest.
+          Start your settlement plan
         </h2>
         <p className="ds-body-lg cta-body" style={{ color: 'rgba(255,246,241,0.8)', maxWidth: 540 }}>
-          Airport pickup, a rental, your SIN, OHIP, a SIM — pick what you need
-          and an advisor sorts it on WhatsApp. You only pay for the services you ask for.
+          Answer a few quick questions and we&apos;ll create a step-by-step plan for your life
+          in Canada — from arrival to settlement.
         </p>
         <div className="m-cta__btns">
           <button className="sy-btn sy-btn--primary sy-btn--lg cta-btn" style={{ gap: 10 }} onClick={onStart}>
-            Tell us what you need
+            Create my settlement roadmap
             <ArrowRight size={20} strokeWidth={2} />
           </button>
           <a href={WA_ADVISOR} target="_blank" rel="noopener noreferrer"

@@ -158,8 +158,7 @@ export default function Hero({ onStart }: { onStart: () => void }) {
         </h1>
 
         <p className="ds-body-lg m-hero__sub hero-sub">
-          From immigration and airport pickup to housing, SIN, health card, banking, jobs,
-          taxes, and community support — all in one place.
+          Immigration, relocation, banking, housing, jobs, taxes, and community — all in one place.
         </p>
 
         <div className="sy-hero__cta hero-cta">

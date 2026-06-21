@@ -3,27 +3,8 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Globe } from 'lucide-react'
 
-const WA_ADVISOR = 'https://wa.me/16474870919?text=Hi%20Settly%2C%20I%27d%20like%20to%20speak%20with%20an%20advisor.'
-
-const COLS = [
-  {
-    heading: 'Services',
-    links: ['Airport pickup', 'Housing', 'Banking', 'SIN & ID', 'Getting around'],
-    toForm: true,
-  },
-  {
-    heading: 'Newcomers',
-    links: ['Students', 'New PRs', 'Work permits', 'Visitors'],
-    toForm: true,
-  },
-  {
-    heading: 'Support',
-    links: ['Help centre', 'Message an advisor', 'Trust & safety', 'Privacy'],
-    toForm: false,
-  },
-]
+const WA_COMMUNITY = 'https://wa.me/16474870919?text=Hi%20Settly%2C%20I%27d%20like%20to%20join%20the%20newcomer%20community.'
 
 export default function Footer({ onStart }: { onStart: () => void }) {
   const rootRef = useRef<HTMLElement>(null)
@@ -60,41 +41,40 @@ export default function Footer({ onStart }: { onStart: () => void }) {
         <div className="m-footer__brand footer-brand">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/settly-logo-white.svg" alt="Settly" height={32} />
-          <p>The friendliest way to land in Canada.</p>
+          <p className="ds-body-sm m-footer__pitch-sub">The friendliest way to land in Canada.</p>
         </div>
 
-        {COLS.map((col) => (
-          <div key={col.heading} className="m-footer__col footer-col">
-            <h4>{col.heading}</h4>
-            {col.links.map((link) => {
-              if (link === 'Message an advisor') {
-                return (
-                  <a key={link} href={WA_ADVISOR} target="_blank" rel="noopener noreferrer" className="m-footer__link">
-                    {link}
-                  </a>
-                )
-              }
-              if (col.toForm) {
-                return (
-                  <a key={link} href="#" className="m-footer__link"
-                    onClick={(e) => { e.preventDefault(); onStart() }}>
-                    {link}
-                  </a>
-                )
-              }
-              return (
-                <a key={link} href="#" className="m-footer__link">{link}</a>
-              )
-            })}
-          </div>
-        ))}
+        <div className="m-footer__col footer-col">
+          <h4 className="ds-title-sm" style={{ color: 'var(--on-dark)' }}>Settly</h4>
+          <a href="#" className="m-footer__link">About</a>
+          <a href="#how" className="m-footer__link">How it works</a>
+          <a href="mailto:hello@settly.ca" className="m-footer__link">Contact</a>
+        </div>
+
+        <div className="m-footer__col footer-col">
+          <h4 className="ds-title-sm" style={{ color: 'var(--on-dark)' }}>For newcomers</h4>
+          <a href="#" className="m-footer__link"
+            onClick={(e) => { e.preventDefault(); onStart() }}>Get your Canada plan</a>
+          <a href={WA_COMMUNITY} target="_blank" rel="noopener noreferrer" className="m-footer__link">
+            Join WhatsApp community
+          </a>
+          <a href="#" className="m-footer__link">Resources</a>
+        </div>
+
+        <div className="m-footer__col footer-col">
+          <h4 className="ds-title-sm" style={{ color: 'var(--on-dark)' }}>Partners</h4>
+          <a href="#" className="m-footer__link">Immigration consultants</a>
+          <a href="#" className="m-footer__link">Housing partners</a>
+          <a href="#" className="m-footer__link">Career partners</a>
+        </div>
       </div>
 
       <div className="m-footer__legal">
-        <span>© 2026 Settly. All rights reserved. Operated by Oxnard Technologies Limited.</span>
+        <span>© 2026 Settly. Operated by Oxnard Technologies Limited.</span>
         <span className="m-footer__legal-right">
-          <Globe size={15} strokeWidth={1.8} />
-          English · CAD
+          <a href="#" className="m-footer__link">Privacy Policy</a>
+          <a href="#" className="m-footer__link">Terms</a>
+          <a href="mailto:hello@settly.ca" className="m-footer__link">hello@settly.ca</a>
         </span>
       </div>
     </footer>
