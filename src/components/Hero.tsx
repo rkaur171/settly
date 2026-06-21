@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import {
-  ArrowRight, PlayCircle, Check,
+  ArrowRight, Check,
   Plane, Home, Landmark, CreditCard, Smartphone, BadgeCheck, Cross, Car,
 } from 'lucide-react'
 
@@ -166,10 +166,6 @@ export default function Hero({ onStart }: { onStart: () => void }) {
             Get started
             <ArrowRight size={20} strokeWidth={2} />
           </button>
-          <a href="#how" className="sy-link-btn">
-            <PlayCircle size={20} strokeWidth={1.8} />
-            See how it works
-          </a>
         </div>
 
         <a

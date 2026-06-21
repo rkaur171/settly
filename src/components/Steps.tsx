@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { ClipboardList, Route, MessageCircle, ArrowRight } from 'lucide-react'
+import { ClipboardList, Route, MessageCircle } from 'lucide-react'
 
 type StepTone = 'blue' | 'teal' | 'amber'
 
@@ -75,11 +75,6 @@ export default function Steps() {
         <div className="steps-head m-section__head m-section__head--center">
           <span className="ds-overline" style={{ color: 'var(--coral-600)' }}>Your guided journey</span>
           <h2 className="ds-display-lg" style={{ marginTop: 12 }}>How we guide your first year in Canada</h2>
-          <p className="m-journey__rail">
-            You <ArrowRight size={14} strokeWidth={2} style={{ color: 'var(--border-strong)' }} />
-            Settly <ArrowRight size={14} strokeWidth={2} style={{ color: 'var(--border-strong)' }} />
-            Your life in Canada
-          </p>
         </div>
 
         <div className="m-steps__grid">
