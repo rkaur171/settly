@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import {
   ArrowLeft, ArrowRight, X, Leaf, Check, Sparkles,
   GraduationCap, BadgeCheck, Briefcase, Compass,
-  Plane, Home, Landmark, CreditCard, Smartphone, Cross, Car,
+  Home, Landmark, CreditCard, Smartphone, Cross, Car,
   MessageCircle, Mail, ShieldCheck, Phone, User, ChevronDown,
   Route, Search, ListOrdered, MapPin,
 } from 'lucide-react'
@@ -20,7 +20,7 @@ const STATUSES = [
 ]
 
 const SERVICES = [
-  { id: 'airport', Icon: Plane,      title: 'Airport pickup'      },
+  { id: 'airport', Icon: BadgeCheck,  title: 'Get your SIN'        },
   { id: 'housing', Icon: Home,       title: 'Housing'             },
   { id: 'banking', Icon: Landmark,   title: 'Bank account'        },
   { id: 'credit',  Icon: CreditCard, title: 'Credit card'         },
@@ -38,8 +38,9 @@ const ORIGINS = [
 const CITIES = [
   'Toronto', 'Mississauga', 'Brampton', 'Markham', 'Vaughan', 'Richmond Hill',
   'Oakville', 'Burlington', 'Milton', 'Pickering', 'Ajax', 'Whitby', 'Oshawa',
-  'Newmarket', 'Aurora', 'Caledon', 'Halton Hills', 'Scarborough', 'North York',
-  'Etobicoke', 'East York', 'Somewhere else in the GTA',
+  'Newmarket', 'Aurora', 'Caledon', 'Halton Hills',
+  'King', 'Georgina', 'Uxbridge', 'Scugog', 'Brock', 'Clarington', 'East Gwillimbury', 'Whitchurch-Stouffville',
+  'Scarborough', 'North York', 'Etobicoke', 'East York', 'Somewhere else in the GTA',
 ]
 
 const COUNTRY_CODES = [
