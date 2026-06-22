@@ -1362,6 +1362,7 @@ img, svg { display: block; }
 
 .sy-railcard            { background: var(--canvas); border: 1px solid var(--hairline); border-radius: var(--radius-lg); padding: 22px; }
 .sy-railcard--advisor   { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.sy-done__advisor       { padding-left: 36px; padding-right: 36px; }
 
 /* ---- Button extras ---- */
 .sy-btn--block { width: 100%; justify-content: center; }
