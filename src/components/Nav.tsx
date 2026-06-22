@@ -48,7 +48,7 @@ function WhereWeServe() {
                 {r.cities.map((c) => (
                   <a
                     key={c}
-                    href={`https://wa.me/16474870919?text=${encodeURIComponent(`Hi Settly, I'm in ${c} and would like help settling in.`)}`}
+                    href={`https://wa.me/16474870919?text=${encodeURIComponent(`Hi Immiefy, I'm in ${c} and would like help settling in.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="sy-navdd__city"
@@ -97,7 +97,7 @@ export default function Nav({ onStart }: { onStart: () => void }) {
       <div className="m-nav__inner">
         <div className="sy-brand">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/settly-logo.svg" alt="Settly" height={32} />
+          <img src="/immiefy-logo.svg" alt="Immiefy" height={32} />
           <span className="sy-locale">
             <Leaf size={14} strokeWidth={2} />
             Canada
@@ -115,7 +115,7 @@ export default function Nav({ onStart }: { onStart: () => void }) {
         <div className="m-nav__right">
           <a
             className="sy-btn sy-btn--primary sy-btn--sm"
-            href="https://wa.me/16474870919?text=Hi%20Settly%2C%20I%20need%20urgent%20help%20settling%20in."
+            href="https://wa.me/16474870919?text=Hi%20Immiefy%2C%20I%20need%20urgent%20help%20settling%20in."
             target="_blank"
             rel="noopener noreferrer"
             style={{ gap: 8 }}

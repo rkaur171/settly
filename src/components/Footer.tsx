@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-const WA_COMMUNITY = 'https://wa.me/16474870919?text=Hi%20Settly%2C%20I%27d%20like%20to%20join%20the%20newcomer%20community.'
+const WA_COMMUNITY = 'https://wa.me/16474870919?text=Hi%20Immiefy%2C%20I%27d%20like%20to%20join%20the%20newcomer%20community.'
 
 export default function Footer({ onStart }: { onStart: () => void }) {
   const rootRef = useRef<HTMLElement>(null)
@@ -40,12 +40,12 @@ export default function Footer({ onStart }: { onStart: () => void }) {
       <div className="m-footer__top">
         <div className="m-footer__brand footer-brand">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/settly-logo-white.svg" alt="Settly" height={32} />
+          <img src="/immiefy-logo-white.svg" alt="Immiefy" height={32} />
           <p className="ds-body-sm m-footer__pitch-sub">The friendliest way to land in Canada.</p>
         </div>
 
         <div className="m-footer__col footer-col">
-          <h4 className="ds-title-sm" style={{ color: 'var(--on-dark)' }}>Settly</h4>
+          <h4 className="ds-title-sm" style={{ color: 'var(--on-dark)' }}>Immiefy</h4>
           <a href="#" className="m-footer__link">About</a>
           <a href="#how" className="m-footer__link">How it works</a>
           <a href="mailto:hello@settly.ca" className="m-footer__link">Contact</a>
@@ -70,7 +70,7 @@ export default function Footer({ onStart }: { onStart: () => void }) {
       </div>
 
       <div className="m-footer__legal">
-        <span>© 2026 Settly. Operated by Oxnard Technologies Limited.</span>
+        <span>© 2026 Immiefy. Operated by Oxnard Technologies Limited.</span>
         <span className="m-footer__legal-right">
           <a href="#" className="m-footer__link">Privacy Policy</a>
           <a href="#" className="m-footer__link">Terms</a>

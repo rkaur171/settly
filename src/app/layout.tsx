@@ -10,9 +10,9 @@ const plusJakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Settly Canada — Settle in, feel at home faster',
+  title: 'Immiefy Canada — newcomer onboarding',
   description:
-    'Housing, banking, your SIN, a phone plan, getting around — Settly walks you through every step of arriving in Canada, in the right order.',
+    'Housing, banking, your SIN, a phone plan, getting around — Immiefy walks you through every step of arriving in Canada, in the right order.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

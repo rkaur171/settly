@@ -188,7 +188,7 @@ function OnboardingForm({
       <header className="sy-flow__top">
         <div className="sy-brand">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/settly-logo.svg" alt="Settly" height={30} />
+          <img src="/immiefy-logo.svg" alt="Immiefy" height={30} />
           <span className="sy-locale"><Leaf size={14} strokeWidth={2} />Canada</span>
         </div>
         <div className="sy-flow__count">{step + 1} / {TOTAL}</div>
@@ -385,14 +385,14 @@ function DoneScreen({ answers, onHome }: { answers: Answers; onHome: () => void 
     : (answers.contact ? `${answers.dial} ${answers.contact}` : 'your phone')
 
   const waHref = 'https://wa.me/16474870919?text=' +
-    encodeURIComponent(`Hi Settly, this is ${firstName}. I just submitted my details and would love to get started.`)
+    encodeURIComponent(`Hi Immiefy, this is ${firstName}. I just submitted my details and would love to get started.`)
 
   return (
     <div className="sy-plan">
       <header className="sy-flow__top sy-plan__top">
         <div className="sy-brand">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/settly-logo.svg" alt="Settly" height={30} />
+          <img src="/immiefy-logo.svg" alt="Immiefy" height={30} />
           <span className="sy-locale"><Leaf size={14} strokeWidth={2} />Canada</span>
         </div>
         <button type="button" className="sy-btn sy-btn--secondary sy-btn--sm" onClick={onHome} style={{ gap: 8 }}>
@@ -405,7 +405,7 @@ function DoneScreen({ answers, onHome }: { answers: Answers; onHome: () => void 
           <span className="sy-done__check"><Check size={38} strokeWidth={2.4} /></span>
           <h1 className="ds-display-lg sy-done__title">You&apos;re all set, {firstName} 🎉</h1>
           <p className="ds-body-lg sy-done__lede">
-            Thanks for sharing the details of your move. Someone from the Settly team
+            Thanks for sharing the details of your move. Someone from the Immiefy team
             will get in touch on <strong>{channelLabel}</strong> within a few hours
             at <strong>{contact}</strong>.
           </p>

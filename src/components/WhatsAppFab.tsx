@@ -4,7 +4,7 @@ export default function WhatsAppFab() {
   return (
     <a
       className="sy-wa-fab"
-      href="https://wa.me/16474870919?text=Hi%20Settly%2C%20I%20just%20arrived%20and%20need%20help%20settling%20in."
+      href="https://wa.me/16474870919?text=Hi%20Immiefy%2C%20I%20just%20arrived%20and%20need%20help%20settling%20in."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Connect on WhatsApp"

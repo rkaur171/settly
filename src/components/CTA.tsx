@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ArrowRight } from 'lucide-react'
 
-const WA_ADVISOR = 'https://wa.me/16474870919?text=Hi%20Settly%2C%20I%27d%20like%20to%20talk%20to%20an%20advisor.'
+const WA_ADVISOR = 'https://wa.me/16474870919?text=Hi%20Immiefy%2C%20I%27d%20like%20to%20talk%20to%20an%20advisor.'
 
 export default function CTA({ onStart }: { onStart: () => void }) {
   const rootRef = useRef<HTMLDivElement>(null)

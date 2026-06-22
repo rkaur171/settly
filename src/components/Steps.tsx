@@ -94,7 +94,7 @@ export default function Steps() {
         </div>
 
         <p className="ds-title-md m-steps__outro">
-          From confusion to clarity — Settly guides every step of your new life in Canada.
+          From confusion to clarity — Immiefy guides every step of your new life in Canada.
         </p>
       </div>
     </section>
