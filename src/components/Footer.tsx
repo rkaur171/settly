@@ -48,7 +48,7 @@ export default function Footer({ onStart }: { onStart: () => void }) {
           <h4 className="ds-title-sm" style={{ color: 'var(--on-dark)' }}>Immiefy</h4>
           <a href="#" className="m-footer__link">About</a>
           <a href="#how" className="m-footer__link">How it works</a>
-          <a href="mailto:hello@settly.ca" className="m-footer__link">Contact</a>
+          <a href="mailto:hello@immiefy.ca" className="m-footer__link">Contact</a>
         </div>
 
         <div className="m-footer__col footer-col">
@@ -74,7 +74,7 @@ export default function Footer({ onStart }: { onStart: () => void }) {
         <span className="m-footer__legal-right">
           <a href="#" className="m-footer__link">Privacy Policy</a>
           <a href="#" className="m-footer__link">Terms</a>
-          <a href="mailto:hello@settly.ca" className="m-footer__link">hello@settly.ca</a>
+          <a href="mailto:hello@immiefy.ca" className="m-footer__link">hello@immiefy.ca</a>
         </span>
       </div>
     </footer>
