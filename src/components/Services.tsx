@@ -38,7 +38,7 @@ const PHASES: {
     services: [
       { Icon: BadgeCheck, title: 'Get your SIN',        description: 'We pre-fill the forms and tell you exactly what to bring.' },
       { Icon: Landmark,   title: 'Open a bank account', description: 'A newcomer chequing account on day one with just your passport.' },
-      { Icon: Home,       title: 'Find housing',         description: 'Short-term first, then a lease — no Canadian credit history needed.', badge: 'Popular' },
+      { Icon: Home,       title: 'Find housing',         description: 'Short-term first, then a lease — no Canadian credit history needed.' },
       { Icon: Cross,      title: 'Get health card',      description: 'Apply for provincial health coverage as soon as you have an address.' },
       { Icon: Car,        title: "Get driver's licence", description: 'Exchange or apply for a licence and start driving sooner.' },
     ],
